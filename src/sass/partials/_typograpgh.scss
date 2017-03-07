@@ -1,0 +1,84 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  font-size: 16px;
+  font-weight: 200;
+  color: $link-color;
+  @include transition($transition);
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+  &.link {
+    color: $link-hover-color;
+  }
+}
+p {
+  color: $text-color;
+  font-size: $font-size;
+  line-height: 19px;
+}
+strong {
+  font-weight: 700;
+}
+ol {
+  li {
+    margin: 0 0 10px;
+  }
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+input,
+textarea,
+select {
+  width: 100%;
+  outline: none !important;
+  @include transition($transition);
+}
+select {
+  -webkit-appearance: none;
+}
+textarea {
+  resize: none;
+}
+button,
+input,
+textarea,
+a {
+  outline: none !important;
+}
+.phone {
+  border-bottom: 0;
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    color: $link-color;
+    border-bottom: 1px solid transparent;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.4px;
+    @include transition($transition);
+  }
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+    position: relative;
+    top: -2px;
+  }
+  &:hover {
+    border-bottom: 0;
+
+    span {
+      color: $link-hover-color;
+      border-bottom: 1px solid;
+    }
+  }
+}

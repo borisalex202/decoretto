@@ -1,0 +1,90 @@
+.icon {
+  @include transition($transition);
+
+  &-menu {
+    display: none;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    min-width: 30px;
+    cursor: pointer;
+
+    .icon-bar {
+      position: relative;
+      display: block;
+      width: 28px;
+      height: 2px;
+      margin-bottom: 5px;
+      background: $second-color;
+      border-radius: 0;
+      @include transition($transition);
+
+      &:last-child {
+        width: 18px;
+      }
+    }
+    @media (max-width: $screen-xs-max) {
+      display: block;
+    }
+  }
+  &-cross {
+    max-width: 20px;
+    max-height: 20px;
+    color: $main-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+  &-logo {
+    &-mobile {
+      max-width: 178px;
+      max-height: 41px;
+    }
+    &-main {
+      max-width: 178px;
+      max-height: 41px;
+      color: $main-color;
+
+      &:hover {
+        color: $second-color;
+      }
+    }
+  }
+  &-phone {
+    max-width: 30px;
+    max-height: 30px;
+    color: $main-color;
+  }
+  &-directory {
+    width: 29px;
+    height: 29px;
+    background-image: url('../img/svg/directory.svg');
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+
+    &.hover {
+      background-image: url('../img/svg/directory-hover.svg');
+    }
+  }
+  &-download {
+    width: 25px;
+    height: 29px;
+    background-image: url('../img/svg/download.svg');
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+
+    &.hover {
+      background-image: url('../img/svg/download-hover.svg');
+    }
+  }
+  &-vk,
+  &-twitter,
+  &-facebook,
+  &-instagram {
+    max-width: 30px;
+    max-height: 30px;
+    color: #fff;
+  }
+}

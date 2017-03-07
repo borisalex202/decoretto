@@ -1,0 +1,37 @@
+/* Fonts */
+$font-family-base:             'PFDinTextPro';
+$font-family-second:           'PFDinTextCompPro';
+$font-size:                    15px;
+
+/* Animation */
+$transition: all .3s ease;
+
+/* Main */
+$main-color:                   #B5267A;
+$second-color:                 #18284c;
+$white:                        #fff;
+$black:                        #000;
+
+$text-color:                   #151515;
+$text-second-color:            #1a1a1a;
+$gray-color:                   #b2b2b2;
+
+$border-color:                 #E1E1E1;
+
+$menu-item:                    #32306b;
+$menu-item-hover:              $main-color;
+
+/* Links */
+$link-color:                   #32306b;
+$link-hover-color:             $main-color;
+
+/* Buttons */
+$btn-default-img:              url('../img/bg-btn-default.png');
+$btn-default-img-hover:              url('../img/bg-btn-default-hover.png');
+$btn-default-bg-hover:         #b900cf;
+$btn-default-color:            #f7f7f7;
+
+$btn-primary-img:              url('../img/bg-btn-primary.png');
+$btn-primary-img-hover:              url('../img/bg-btn-primary-hover.png');
+$btn-primary-bg-hover:         #b900cf;
+$btn-primary-color:            #f7f7f7;
