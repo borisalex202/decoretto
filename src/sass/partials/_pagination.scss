@@ -1,0 +1,81 @@
+.pagination {
+  width: auto;
+  padding: 0;
+  margin: 30px 0;
+  @include inline-flex();
+  @include flex-wrap(wrap);
+  @include transition($transition);
+
+  * {
+    @include transition($transition);
+  }
+  li {
+    width: 60px;
+    height: 60px;
+
+    &.dissable {
+      color: #B7B7C6;
+
+      a {
+        cursor: default;
+
+        &:hover {
+          @include box-shadow(none);
+          @include scale(1, 1);
+
+          .icon {
+            color: #B7B7C6;
+          }
+        }
+      }
+      .icon {
+        color: #B7B7C6;
+      }
+    }
+    &.active {
+      a {
+        background: url('../img/bg-btn-default.png') no-repeat;
+        color: #fff;
+        cursor: default;
+
+        &:hover {
+          background: url('../img/bg-btn-default.png') no-repeat;
+          @include box-shadow(none);
+          @include scale(1, 1);
+        }
+      }
+    }
+    a {
+      display: block;
+      width: calc(60px + 1px);
+      height: calc(60px + 1px);
+      font-size: 22px;
+      font-weight: 200;
+      text-align: center;
+      line-height: 60px;
+      color: #464389;
+      border: 1px solid #D4D6DB;
+      margin-top: -1px;
+      margin-left: 0.2px;
+      background: transparent;
+      position: relative;
+      z-index: 1;
+      @include scale(1, 1);
+
+      &:hover {
+        z-index: 2;
+        background: #fff;
+        @include scale(1.2, 1.2);
+        @include box-shadow(0 0 62px 0 rgba(202,202,207,.72));
+
+        .icon {
+          color: #464389;
+        }
+      }
+    }
+    .icon {
+      position: relative;
+      top: 10px;
+    }
+  }
+}

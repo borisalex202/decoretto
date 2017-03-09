@@ -79,6 +79,16 @@
       background-image: url('../img/svg/download-hover.svg');
     }
   }
+  &-svg {
+    &-directory,
+    &-directory-hover,
+    &-download,
+    &-download-hover {
+      max-width: 30px;
+      max-height: 30px;
+      color: #fff;
+    }
+  }
   &-vk,
   &-twitter,
   &-facebook,
@@ -86,5 +96,46 @@
     max-width: 30px;
     max-height: 30px;
     color: #fff;
+  }
+  &-arrow {
+    &-right,
+    &-left,
+    &-pag-left,
+    &-pag-right {
+      max-width: 30px;
+      max-height: 30px;
+      color: #4C498F;
+    }
+  }
+  &-hover {
+    &.active {
+      .icon {
+        color: #464389 !important;
+      }
+    }
+    &:hover {
+      .icon {
+        @include opacity(0);
+
+        &.hover {
+          @include opacity(1);
+        }
+      }
+    }
+    .text {
+      padding-left: 30px;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        left: -10px;
+        top: -8px;
+      }
+    }
+    .icon {
+      &.hover {
+        @include opacity(0);
+      }
+    }
   }
 }

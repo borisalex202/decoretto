@@ -1,0 +1,106 @@
+.slick {
+  &-slide {
+    outline: none !important;
+  }
+  &-track {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+  &-arrow {
+    position: absolute;
+    top: 55%;
+    z-index: 9;
+    width: 63px;
+    height: 63px;
+    text-align: center;
+    line-height: 83px;
+    background: #fff;
+    border: 0;
+    @include transition($transition);
+    @include scale(1, 1);
+
+    &:hover {
+      @include scale(1.1, 1.1);
+
+      .icon {
+        color: #4C498F;
+      }
+    }
+    .icon {
+      color: #A4A4C5;
+    }
+  }
+  &-prev {
+    left: -25px;
+  }
+  &-next {
+    right: -25px;
+  }
+  &-dots {
+    margin: 25px 0 0 0;
+    padding: 0;
+    height: 4px;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 3px;
+
+      &.slick-active {
+        button {
+          background: #4C4B8E;
+        }
+      }
+      button {
+        display: block;
+        width: 63px;
+        height: 4px;
+        border: 0;
+        padding: 0;
+        font-size: 0;
+        background: #fff;
+
+        @include transition($transition);
+      }
+    }
+  }
+  @media (max-width: 780px) {
+    &-arrow {
+      top: 50%;
+      background: transparent;
+    }
+    &-prev {
+      left: -10px;
+    }
+    &-next {
+      right: -10px;
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    &-dots {
+      li {
+        margin: 0 1.5px;
+
+        button {
+          width: 25px;
+          height: 2px;
+        }
+      }
+    }
+  }
+  @media (max-width: 630px) {
+    &-arrow {
+      top: 55%;
+      background: transparent;
+    }
+  }
+  @media (max-width: 400px) {
+    &-arrow {
+      top: 53%;
+      background: transparent;
+    }
+  }
+}

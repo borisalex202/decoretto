@@ -9,53 +9,83 @@
   @include transition($transition);
 
   &-default {
-    background-image: $btn-default-img;
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
     border-bottom: 0;
     line-height: 15px;
     letter-spacing: 0.2px;
     color: $btn-default-color;
     @include scale(1,1);
 
+    &.green {
+      &:before {
+        background-image: url('../img/bg-btn-green.png');
+      }
+    }
+    &.blue {
+      &:before {
+        background-image: url('../img/bg-btn-blue.png');
+      }
+    }
+    &.pink {
+      &:before {
+        background-image: url('../img/bg-btn-pink.png');
+      }
+    }
+    &.orange {
+      &-light {
+        &:before {
+          background-image: url('../img/bg-btn-orange-light.png');
+        }
+      }
+      &:before {
+        background-image: url('../img/bg-btn-orange.png');
+      }
+    }
+    &.turquoise {
+      &:before {
+        background-image: url('../img/bg-btn-turquoise.png');
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: $btn-default-img;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+    }
     &:hover {
-      background-image: $btn-default-img-hover;
+      //background-image: $btn-default-img-hover;
       color: $btn-default-color;
       border-bottom: 0;
       z-index: 2;
       @include box-shadow(0 0 27px 0 rgba(48,22,61,.5));
       @include scale(1.05, 1.05);
-    }
-    &:focus,
-    &:active,
-    &:active:hover {
-      color: $btn-default-color;
-      border-bottom: 0;
-    }
-  }
-  &-primary {
-    background-image: $btn-primary-img;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-bottom: 0;
-    line-height: 15px;
-    letter-spacing: 0.2px;
-    color: $btn-primary-color;
-    @include scale(1,1);
 
-    &:hover {
-      background-image: $btn-primary-img-hover;
-      color: $btn-primary-color;
-      border-bottom: 0;
-      z-index: 2;
-      @include scale(1.05, 1.05);
-      @include box-shadow(0 0 27px 0 rgba(48,22,61,.5));
+      &:before {
+        @include filter(brightness, 110%);
+      }
     }
     &:focus,
     &:active,
     &:active:hover {
-      color: $btn-primary-color;
+      color: $btn-default-color;
       border-bottom: 0;
+    }
+    &.active {
+      color: #464389;
+
+      &:before {
+        background: #fff;
+      }
+      &:hover {
+        @include box-shadow(none);
+        @include scale(1, 1);
+      }
     }
   }
 

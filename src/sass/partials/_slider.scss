@@ -1,0 +1,44 @@
+.slider {
+  &-advantage {
+    position: relative;
+    margin-top: -70px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: url('../img/bg-slider-advantage.png') no-repeat;
+      background-size: cover;
+    }
+    .slick {
+      &-track {
+        @include flexbox();
+      }
+      &-list {
+        padding: 0 !important;
+      }
+      &-current {
+        background: rgba(255,255,255,.8);
+      }
+      &-slide {
+        height: auto;
+        @include transition($transition);
+      }
+    }
+    @media (max-width: $screen-xs-max) {
+      margin-top: -60px;
+    }
+    @media (max-width: 630px) {
+      margin-top: -70px;
+
+      .slick {
+        &-current {
+          background: rgba(255,255,255,.5);
+        }
+      }
+    }
+  }
+}
