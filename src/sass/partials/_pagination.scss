@@ -15,19 +15,8 @@
 
     &.dissable {
       color: #B7B7C6;
+      pointer-events: none;
 
-      a {
-        cursor: default;
-
-        &:hover {
-          @include box-shadow(none);
-          @include scale(1, 1);
-
-          .icon {
-            color: #B7B7C6;
-          }
-        }
-      }
       .icon {
         color: #B7B7C6;
       }
@@ -37,12 +26,7 @@
         background: url('../img/bg-btn-default.png') no-repeat;
         color: #fff;
         cursor: default;
-
-        &:hover {
-          background: url('../img/bg-btn-default.png') no-repeat;
-          @include box-shadow(none);
-          @include scale(1, 1);
-        }
+        pointer-events: none;
       }
     }
     a {

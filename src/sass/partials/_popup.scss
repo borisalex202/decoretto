@@ -1,0 +1,110 @@
+.popup {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  pointer-events: none;
+  @include transition($transition);
+  @include opacity(0);
+  @include box-shadow(0 0 75px 0 rgba(219,217,230,.75));
+
+  &.in {
+    pointer-events: all;
+    @include opacity(1);
+  }
+  &.load-image {
+    top: 65px;
+    padding: 60px 30px;
+    width: calc(100% + 275.5px);
+    margin-left: -275px;
+
+    h4 {
+      font-size: 18px;
+      font-weight: 200;
+      color: #32306b;
+      line-height: 20px;
+      margin: 0 0 15px 0;
+    }
+    .side {
+      &s {
+        @include flexbox();
+        @include flex-wrap(wrap);
+      }
+      &-left {
+        width: calc(50% - 50px);
+        padding: 0 0 33px 0;
+        margin-bottom: 33px;
+        border-bottom: 1px solid #DBD9E1;
+      }
+      &-right {
+        width: calc(50% - 50px);
+        padding: 0 0 33px 0;
+        margin: 0 0 33px auto;
+        border-bottom: 1px solid #DBD9E1;
+      }
+    }
+    .wallpapers {
+      margin: 0 -18px;
+      @include flexbox();
+      @include flex-wrap(wrap);
+    }
+    .checkbox {
+      width: calc(50% - 36px);
+      margin: 0 18px 36px;
+    }
+    @media (max-width: $screen-md-max) {
+      margin-left: 0;
+      width: 100%;
+
+      .side {
+        &-left {
+          width: 100%;
+        }
+        &-right {
+          width: 100%;
+        }
+      }
+    }
+    @media (max-width: $screen-sm-max) {
+      .side {
+        &-left {
+          padding: 0;
+          border-bottom: 0;
+          margin-bottom: 40px;
+        }
+        &-right {
+          padding: 0;
+          border-bottom: 0;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+  &-inner {
+    max-width: 825px;
+    margin: 0 auto;
+  }
+  &-title {
+    font-family: $font-family-second;
+    font-size: 40px;
+    color: #4c4990;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &-desc {
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 20px;
+    color: #32306b;
+    text-align: center;
+    margin-bottom: 55px;
+  }
+  @media (max-width: $screen-sm-max) {
+    &-title {
+      font-size: 35px;
+      line-height: 35px;
+    }
+  }
+}

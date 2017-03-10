@@ -82,3 +82,200 @@ a {
     }
   }
 }
+.show-all {
+  display: block;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 16px;
+  color: #6d6c90;
+  padding: 20px 10px;
+  margin-top: 20px;
+  margin-bottom: -20px;
+  text-align: center;
+  border-top: 1px solid #DFDFDF;
+
+  &:hover {
+    color: $main-color;
+  }
+}
+.checkbox {
+  width: 100%;
+  margin-bottom: 4px;
+  cursor: pointer;
+  @include flexbox();
+  @include align-items(center);
+
+  * {
+    @include transition($transition);
+  }
+  &:hover {
+    .text {
+      color: $main-color;
+    }
+    .icn {
+      z-index: 2;
+      background: #fff;
+      @include scale(1.3, 1.3);
+      @include box-shadow(0 0 62px 0 rgba(202,202,207,.7));
+    }
+  }
+  &.color {
+    width: 35px;
+    margin: 0 10px 10px 0;
+    @include inline-flex();
+
+    &:nth-child(5n+0) {
+      margin-right: 0;
+    }
+    input {
+      &:checked {
+        ~ .icn {
+          border: 2px solid;
+        }
+      }
+    }
+    .icn {
+      width: 35px;
+      height: 35px;
+      margin: 0;
+      border: 2px solid transparent;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &:before {
+        background: url('../img/svg/checked-white.svg') center no-repeat;
+        background-size: 15px 15px;
+      }
+    }
+  }
+  &.image {
+    position: relative;
+    @include flex-wrap(wrap);
+
+    * {
+      @include transition($transition);
+    }
+    &:hover {
+      .icn {
+        @include scale(1, 1);
+        @include box-shadow(0 0 27px 0 rgba(48,22,61,.3));
+
+        img {
+          @include opacity(0);
+        }
+        &-hover {
+          @include opacity(1);
+        }
+      }
+      .icn-hover {
+
+      }
+      .text,
+      .desc {
+        color: $main-color;
+      }
+    }
+    input {
+      &:checked {
+        ~ .icn {
+          border: 0;
+
+          &-hover {
+            @include opacity(1);
+          }
+        }
+        ~ .text,
+        ~ .desc {
+          color: $main-color;
+        }
+      }
+    }
+    .icn {
+      width: auto;
+      border: 0;
+      height: auto;
+      @include opacity(1);
+
+      &:before {
+        display: none;
+      }
+      &-hover {
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9;
+        @include opacity(0);
+      }
+    }
+    .text {
+      display: block;
+      width: 100%;
+      margin: 15px 0 5px;
+      color: #32306b;
+      font-size: 17px;
+      font-weight: 200;
+    }
+    .desc {
+      display: block;
+      width: 100%;
+      margin: 0;
+      color: #32306b;
+      font-size: 14px;
+      font-weight: 200;
+    }
+  }
+  input {
+    display: none;
+
+    &:checked {
+      ~ .icn {
+        border: 1px solid $main-color;
+        @include scale(1, 1);
+        @include box-shadow(none);
+
+        &:before {
+          @include opacity(1);
+        }
+      }
+      ~ .text {
+        color: $main-color;
+      }
+    }
+  }
+  .icn {
+    position: relative;
+    z-index: 1;
+    width: 33px;
+    height: 33px;
+    border: 1px solid #CFD1D7;
+    margin-right: 15px;
+    @include scale(1, 1);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 33px;
+      height: 33px;
+      z-index: 2;
+      background: url('../img/svg/checked.svg') center no-repeat;
+      background-size: 15px 15px;
+      @include opacity(0);
+    }
+  }
+  .text {
+    color: #6d6c90;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+  }
+}
+.more-block {
+  display: none;
+}
