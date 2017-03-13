@@ -165,6 +165,10 @@ a {
         }
         &-hover {
           @include opacity(1);
+
+          img {
+            @include opacity(1);
+          }
         }
       }
       .icn-hover {
@@ -180,8 +184,15 @@ a {
         ~ .icn {
           border: 0;
 
-          &-hover {
+          img {
+            @include opacity(0);
+          }
+          .icn-hover {
             @include opacity(1);
+
+            img {
+              @include opacity(1);
+            }
           }
         }
         ~ .text,
@@ -225,6 +236,11 @@ a {
       color: #32306b;
       font-size: 14px;
       font-weight: 200;
+    }
+    @media (max-width: $screen-md-max) {
+      .text {
+        margin: 10px 0 0;
+      }
     }
   }
   input {
@@ -278,4 +294,24 @@ a {
 }
 .more-block {
   display: none;
+}
+.list {
+  &-check {
+    li {
+      position: relative;
+      margin-bottom: 17px;
+      font-weight: 200;
+      color: #32306b;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: -25px;
+        width: 16px;
+        height: 16px;
+        background: url('../img/svg/checked.svg') no-repeat;
+      }
+    }
+  }
 }

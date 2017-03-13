@@ -14,6 +14,9 @@
       background-size: cover;
     }
     .slick {
+      &-arrow {
+        top: 410px;
+      }
       &-track {
         @include flexbox();
       }
@@ -35,8 +38,18 @@
       margin-top: -70px;
 
       .slick {
+        &-arrow {
+          top: 370px;
+        }
         &-current {
           background: rgba(255,255,255,.5);
+        }
+      }
+    }
+    @media (max-width: $screen-xs) {
+      .slick {
+        &-arrow {
+          top: 390px;
         }
       }
     }

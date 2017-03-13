@@ -76,6 +76,10 @@
 					<form action="">
 						<div class="container">
 							<div class="filter">
+								<div class="filter-result">
+									<span class="summary">Найдено 258</span>
+									<button class="get-result">Подобрать</button>
+								</div>
 								<button type="reset" class="reset">Очистить фильтр</button>
 								<p class="filter-title"> Фильтр</p>
 								<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
@@ -266,40 +270,97 @@
 										<p class="popup-desc">Загрузите свое изображение, заполните необходимые поля и отправьте заявку. Наш менеджер оценит качество изображения, подкорректирует его при необходимости и перезвонит, сообщив стоимость заказа и сроки его изготовления.</p>
 
 										<div class="sides">
-											<div class="side-left">
+											<div class="side side-left">
 												<h4>Загрузите свое изображение</h4>
+												<div id="myAwesomeDropzone" class="dropzone hidden-md hidden-sm hidden-xs">
+													<div class="fallback">
+														<input name="file" type="file" multiple/>
+													</div>
+													<div class="tools">
+														<p class="title">Перетащите изображение в эту область</p>
+													</div>
+												</div>
+												<div class="info fs-16 text-center hidden-md hidden-sm hidden-xs"><p>или загрузите файл с компьютера</p></div>
+												<div class="form-group image">
+													<label>
+														<input type="file" class="form-control">
+														<a class="btn btn-default pink">Обзор</a>
+													</label>
+												</div>
 											</div>
-											<div class="side-right">
+											<div class="side side-right">
 												<h4>Выберите материал обоев</h4>
 												<div class="wallpapers">
 													<label class="checkbox image">
 														<input type="checkbox" name="wallpapers">
-														<span class="icn"><img src="img/check-img1.png" alt=""></span>
-														<span class="icn-hover"><img src="img/check-img-hover1.png" alt=""></span>
+														<span class="icn">
+															<img src="img/check-img1.png" alt="">
+															<span class="icn-hover"><img src="img/check-img-hover1.png" alt=""></span>
+														</span>
 														<span class="text">Песок</span>
 														<span class="desc">бумажная основа</span>
 													</label>
 													<label class="checkbox image">
 														<input type="checkbox" name="wallpapers">
-														<span class="icn"><img src="img/check-img1.png" alt=""></span>
-														<span class="icn-hover"><img src="img/check-img-hover1.png" alt=""></span>
-														<span class="text">Песок</span>
-														<span class="desc">бумажная основа</span>
+														<span class="icn">
+															<img src="img/check-img2.png" alt="">
+															<span class="icn-hover"><img src="img/check-img-hover2.png" alt=""></span>
+														</span>
+														<span class="text">Класический</span>
+														<span class="desc">флезелин</span>
 													</label>
 													<label class="checkbox image">
 														<input type="checkbox" name="wallpapers">
-														<span class="icn"><img src="img/check-img1.png" alt=""></span>
-														<span class="icn-hover"><img src="img/check-img-hover1.png" alt=""></span>
-														<span class="text">Песок</span>
-														<span class="desc">бумажная основа</span>
+														<span class="icn">
+															<img src="img/check-img3.png" alt="">
+															<span class="icn-hover"><img src="img/check-img-hover3.png" alt=""></span>
+														</span>
+														<span class="text">Штукатурка</span>
+														<span class="desc">текстильная основа</span>
 													</label>
 													<label class="checkbox image">
 														<input type="checkbox" name="wallpapers">
-														<span class="icn"><img src="img/check-img1.png" alt=""></span>
-														<span class="icn-hover"><img src="img/check-img-hover1.png" alt=""></span>
-														<span class="text">Песок</span>
-														<span class="desc">бумажная основа</span>
+														<span class="icn">
+															<img src="img/check-img4.png" alt="">
+															<span class="icn-hover"><img src="img/check-img-hover4.png" alt=""></span>
+														</span>
+														<span class="text">Гладкий</span>
+														<span class="desc">флезелин</span>
 													</label>
+												</div>
+											</div>
+											<div class="side side-left side-wallpapers">
+												<h4>Укажите размеры обоев</h4>
+												<div class="row form-block">
+													<div class="col-md-6 col-xs-12">
+														<div class="form-group">
+															<input type="text" class="form-control" placeholder="Ширина, см">
+														</div>
+													</div>
+													<div class="col-md-6 col-xs-12">
+														<div class="form-group">
+															<input type="text" class="form-control" placeholder="Высота, см">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="side side-right side-contact">
+												<h4>Контактные данные</h4>
+
+												<div class="form-group">
+													<input type="text" class="form-control" placeholder="Как к Вам обращаться?">
+												</div>
+												<div class="form-group">
+													<input type="tel" class="form-control" placeholder="Контактный телефон">
+												</div>
+												<div class="form-group">
+													<input type="email" class="form-control" placeholder="Электронная почта">
+												</div>
+												<div class="form-group text-right">
+													<button type="submit" class="btn btn-default pink">Оформить заказ</button>
+												</div>
+												<div class="info mt-40">
+													<p>После оформления заказа, мы свяжемся с Вами в ближайшее время для уточнения данных. Если у Вас есть вопросы или Вы хотите узнать, о состоянии заказа, позвоните нам по номеру: 8 916 825 63 49, указав номер заказа.</p>
 												</div>
 											</div>
 										</div>
@@ -325,6 +386,20 @@
 									<button type="button" class="filter-toggle">Фильтр</button>
 									<button type="reset" class="filter-reset">Очистить фильтр</button>
 								</div>
+								<ul class="catalog-sort">
+									<li>
+										Потолок
+										<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+									</li>
+									<li>
+										Зеленый
+										<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+									</li>
+									<li>
+										Цветы
+										<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+									</li>
+								</ul>
 								<div class="catalog-list">
 									<div class="catalog-item">
 										<div class="catalog-thumb">
@@ -432,6 +507,96 @@
 							</div>
 						</div>
 					</form>
+				</div>
+			</div>
+			<div class="advice">
+				<div class="container">
+					<div class="head">
+						<p class="title">Консультация со специалистом</p>
+						<p class="desc">Оставте заявку и мы ответим на интересющие Вас вопросы.</p>
+					</div>
+					<form class="form">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Имя">
+						</div>
+						<div class="form-group">
+							<input type="tel" class="form-control" placeholder="Телефон">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Почта">
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-default icon-hover right">
+								<span class="text">
+									Отправить заявку
+									<svg class="icon icon-send"><use xlink:href="#icon-send"></use></svg>
+									<svg class="icon icon-send-hover hover"><use xlink:href="#icon-send-hover"></use></svg>
+								</span>
+							</button>
+						</div>
+					</form>
+					<button type="submit" class="btn btn-default icon-hover order">Отправить заявку</button>
+				</div>
+			</div>
+			<div class="approach">
+				<div class="container">
+					<div class="heading">
+						Наш подход к работе
+						<span class="line"></span>
+					</div>
+					<div class="approach-container">
+						<div class="left">
+							<div class="thumb"></div>
+							<div class="design">
+								<span class="text">О компании</span>
+								<p class="title">
+									ДИЗАЙН-СТУДИЯ
+									<span class="line"></span>
+								</p>
+								<p class="desc">Если вы не нашли в нашем каталоге подходящего изображения, мы сможем напечатать любую картинку, понравившуюся Вам. Специалисты дизайн-студии проверят ее качество, помогут найти новое изображение в фотобанках, проведут обработку файла для печати.</p>
+							</div>
+						</div>
+						<div class="right">
+							<div class="design">
+								<span class="text">О компании</span>
+								<p class="title">
+									ДИЗАЙН-СТУДИЯ
+									<span class="line"></span>
+								</p>
+								<p class="desc">Если вы не нашли в нашем каталоге подходящего изображения, мы сможем напечатать любую картинку, понравившуюся Вам. Специалисты дизайн-студии проверят ее качество, помогут найти новое изображение в фотобанках, проведут обработку файла для печати.</p>
+							</div>
+							<div class="production">
+								<div class="production-thumb">
+									<img src="img/production.jpg" alt="">
+								</div>
+								<div class="production-content">
+									<span class="text">О компании</span>
+									<p class="title mini">
+										Собственное производство
+										<span class="line"></span>
+									</p>
+									<p class="desc">Мы используем профессиональное высококачественное оборудование и дорогие краски. Это позволяет нам гарантировать долговечность фотообоев и отличную стойкость к выгоранию краски.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="warranty">
+				<div class="container">
+					<div class="left">
+						<img src="img/warranty-img-md.png" class="md" alt="">
+						<img src="img/warranty-img-xs.png" class="xs" alt="">
+					</div>
+					<div class="right">
+						<p class="title">Мы гарантируем:</p>
+						<ul class="list-check">
+							<li>точность выполнения заказа по размерам и материалу и стыковки полотен:</li>
+							<li>цветопередачу, при условии заказа цветопробы «услуга бесплатная»:</li>
+							<li>устойчивость печати к световому воздействию в течение 5 лет.</li>
+							<li>устойчивость фотообоев к влаге присоблюдении правил эксплуатации.</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 

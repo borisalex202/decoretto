@@ -1,0 +1,59 @@
+.form {
+  &-block {
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+
+    [class*="col-"] {
+      padding-left: 7.5px;
+      padding-right: 7.5px;
+    }
+  }
+  &-group {
+    position: relative;
+    margin-bottom: 13px;
+
+    &.image {
+      input {
+        cursor: pointer;
+        &::-webkit-file-upload-button {
+          display: none;
+        }
+      }
+      .btn {
+        height: 54px;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      @media (max-width: $screen-md-max) {
+        max-width: 50%;
+      }
+      @media (max-width: $screen-sm-max) {
+        max-width: 80%;
+      }
+      @media (max-width: $screen-xs-max) {
+        max-width: 100%;
+      }
+    }
+  }
+  &-control {
+    height: 54px;
+    padding: 19px 20px 15px;
+    line-height: 16px;
+    border: 1px solid #d7d4dd;
+
+    @include placeholder{
+      color: #6b6b84;
+      font-weight: 200;
+      font-size: 15px;
+    }
+
+    &:focus,
+    &:active {
+      border: 1px solid $main-color;
+    }
+  }
+}

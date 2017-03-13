@@ -120,4 +120,9 @@
         }
     });
 
+    $("#myAwesomeDropzone").dropzone({
+        url: '/file-upload',
+        paramName: "file",
+        maxFilesize: 100
+    });
 })(jQuery);
