@@ -54,4 +54,115 @@
       }
     }
   }
+  &-reviews {
+    padding: 0 70px 120px;
+    position: relative;
+
+    &.xs {
+      display: none;
+    }
+    &.slick-initialized {
+      .slick-slide {
+        @include flexbox();
+        @include flex-wrap(wrap);
+      }
+    }
+    .slick {
+      &-arrow {
+        top: inherit;
+        bottom: 25px;
+        width: auto;
+        border: 1px solid #DFE2E9;
+        font-size: 14px;
+        font-weight: 300;
+        color: #32306b;
+        height: 60px;
+        line-height: 32px;
+        @include flexbox();
+        @include align-items(center);
+
+        &:hover {
+          z-index: 10;
+          @include box-shadow(0 0 62px 0 rgba(202,202,207,.7));
+        }
+        .icon {
+          margin: 0 10px;
+          color: #32306b;
+        }
+      }
+      &-disabled {
+        background: #F8F8F8;
+
+        &:hover {
+          cursor: default;
+          @include box-shadow(none);
+          @include scale(1, 1);
+        }
+      }
+      &-prev {
+        left: inherit;
+        right: 50%;
+        margin-left: -0.5px;
+        padding: 15px 30px 15px 10px;
+      }
+      &-next {
+        left: 50%;
+        right: inherit;
+        margin-right: -0.5px;
+        padding: 15px 10px 15px 30px;
+      }
+      &-dots {
+        position: absolute;
+        margin-top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+      &-track {
+        @include flexbox();
+      }
+    }
+    @media (max-width: $screen-md-max) {
+      padding: 0 0 120px;
+    }
+    @media (max-width: 780px) {
+      .slick {
+        &-arrow {
+          background: #fff;
+        }
+        &-disabled {
+          background: #F8F8F8;
+        }
+      }
+    }
+    @media (min-width: 640px) and (max-width: $screen-sm-max) {
+      &.md {
+        display: none;
+      }
+      &.xs {
+        display: block;
+      }
+      .review-content {
+        margin-bottom: 25px;
+      }
+    }
+    @media (max-width: 630px) {
+      .slick {
+        &-arrow {
+          .icon {
+            margin: 0 5px;
+          }
+        }
+        &-prev {
+          padding: 15px 20px 15px 10px;
+          margin-right: -5.5px;
+        }
+        &-next {
+          padding: 15px 10px 15px 20px;
+          margin-left: 4.5px;
+        }
+      }
+    }
+  }
 }

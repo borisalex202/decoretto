@@ -20,13 +20,13 @@
   font-family: 'PFDinTextPro';
   font-style: normal;
   font-weight: 500;
-  src: local('PFDinTextPro'), local('PFDinTextPro-Regular'), url('../fonts/PF_DIN_WEB/PFDinTextPro-Regular.woff2') format('woff2');
+  src: local('PFDinTextPro Medium'), local('PFDinTextPro-Medium'), url('../fonts/PF_DIN_WEB/PFDinTextPro-Medium.woff2') format('woff2');
 }
 @font-face {
   font-family: 'PFDinTextPro';
   font-style: normal;
   font-weight: 400;
-  src: local('PFDinTextPro Medium'), local('PFDinTextPro-Medium'), url('../fonts/PF_DIN_WEB/PFDinTextPro-Medium.woff2') format('woff2');
+  src: local('PFDinTextPro'), local('PFDinTextPro-Regular'), url('../fonts/PF_DIN_WEB/PFDinTextPro-Regular.woff2') format('woff2');
 }
 @font-face {
   font-family: 'PFDinTextPro';
@@ -52,4 +52,10 @@
   font-style: normal;
   font-weight: 500;
   src: local('PFDinTextCompPro'), local('PFDinTextCompPro-Regular'), url('../fonts/PF_DIN_WEB/PFDinTextCompPro-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'PFDinTextCompPro';
+  font-style: normal;
+  font-weight: 200;
+  src: local('PFDinTextCompPro Thin'), local('PFDinTextCompPro-Thin'), url('../fonts/PF_DIN_WEB/PFDinTextCondPro-Thin.woff') format('woff');
 }

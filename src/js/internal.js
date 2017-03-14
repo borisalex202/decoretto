@@ -10,11 +10,15 @@
         mobileMenu: $('.mobile-menu'),
         moreBlock: $('.more-block'),
         prevArrow:'<button class="slick-arrow slick-prev"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></button>',
-        nextArrow: '<button class="slick-arrow slick-next"><svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></button>'
+        nextArrow: '<button class="slick-arrow slick-next"><svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></button>',
+        prevArrowText:'<button class="slick-arrow slick-prev"><svg class="icon icon-arrow-pag-left"><use xlink:href="#icon-arrow-pag-left"></use></svg> Предыдущая</button>',
+        nextArrowText: '<button class="slick-arrow slick-next">Следующая <svg class="icon icon-arrow-pag-right"><use xlink:href="#icon-arrow-pag-right"></use></svg></button>'
     };
     var options = {
         documentWidth: $(document).width()
     };
+
+    @@include('./partials/_sliders.js');
 
     $(window).resize(function () {
         options.documentWidth = $(document).width();
@@ -47,33 +51,6 @@
                 return false;
             }
         }
-    });
-
-    $('.slider-advantage').slick({
-        dots: true,
-        arrows: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        centerMode: true,
-        prevArrow: elements.prevArrow,
-        nextArrow: elements.nextArrow,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 640,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
     });
 
     $('[data-more]').on('click', function (e) {

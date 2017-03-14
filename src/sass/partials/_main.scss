@@ -17,3 +17,9 @@ body {
   position: relative;
   overflow: hidden;
 }
+@media (max-width: $screen-sm-max) {
+  .container {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+}
