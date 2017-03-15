@@ -94,6 +94,14 @@
 
         $(el).addClass('in');
     });
+    $('.open-load-image').on('click', function (e) {
+        var el = $(this).attr('href');
+        e.preventDefault();
+
+        $(el).addClass('in');
+        $('.catalog-tools a').removeClass('active');
+        $('.load-image-btn').addClass('active');
+    });
     $('[data-toggle="modal"]').on('click', function (e) {
         e.preventDefault();
         elements.mobileMenu.removeClass('active');

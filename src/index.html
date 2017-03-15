@@ -11,7 +11,7 @@
 
 					<div class="main-banner-links">
 						<a href="#catalog" class="btn btn-default smooth-link"><span class="text"><span class="icon icon-directory"></span><span class="icon icon-directory hover"></span>Каталог обоев</span></a>
-						<a href="#catalog" class="btn btn-default smooth-link orange-light"><span class="text"><span class="icon icon-download"></span><span class="icon icon-download hover"></span>Загрузить изображение</span></a>
+						<a href="#load_image" class="btn btn-default smooth-link orange-light open-load-image" data-toggle="popup"><span class="text"><span class="icon icon-download"></span><span class="icon icon-download hover"></span>Загрузить изображение</span></a>
 					</div>
 					<div class="main-banner-bottom">
 						<span>ЧТО МЫ ПРЕДЛАГАЕМ КЛИЕНТАМ</span>
@@ -364,21 +364,21 @@
 													<button type="submit" class="btn btn-default pink">Оформить заказ</button>
 												</div>
 												<div class="info mt-40">
-													<p>После оформления заказа, мы свяжемся с Вами в ближайшее время для уточнения данных. Если у Вас есть вопросы или Вы хотите узнать, о состоянии заказа, позвоните нам по номеру: 8 916 825 63 49, указав номер заказа.</p>
+													<p>После оформления заказа, мы свяжемся с Вами в ближайшее время для уточнения данных. Если у Вас есть вопросы или Вы хотите узнать, о состоянии заказа, позвоните нам по номеру: <br>8 916 825 63 49, указав номер заказа.</p>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="catalog-tools">
-									<a href="#" class="btn btn-default active icon-hover">
+									<a href="#" class="btn btn-default active icon-hover catalog-btn">
 										<span class="text">
 											<svg class="icon icon-svg-directory"><use xlink:href="#icon-svg-directory"></use></svg>
 											<svg class="icon icon-svg-directory-hover hover"><use xlink:href="#icon-svg-directory-hover"></use></svg>
 											Каталог<br> Decoretto
 										</span>
 									</a>
-									<a href="#load_image" data-toggle="popup" class="btn btn-default icon-hover">
+									<a href="#load_image" data-toggle="popup" class="btn btn-default icon-hover load-image-btn">
 										<span class="text">
 											<svg class="icon icon-svg-download"><use xlink:href="#icon-svg-download"></use></svg>
 											<svg class="icon icon-svg-download-hover hover"><use xlink:href="#icon-svg-download-hover"></use></svg>
@@ -896,7 +896,6 @@
     $(function(){
 
         $('.crop').Jcrop({
-            //onSelect:    showCoords,
             bgColor:     '#2B2A45',
             bgOpacity:   .6,
             setSelect:   [ 0, 70, 400, 150 ]
@@ -907,7 +906,7 @@
 
         $('.timer-numbers').countdown({
             timestamp	: ts,
-            callback	: function(days, hours, minutes, seconds){
+            callback	: function(){
 
                 var message = '';
 
