@@ -89,6 +89,13 @@
           margin: 0 10px;
           color: #32306b;
         }
+        @-moz-document url-prefix() {
+          display: block;
+
+          span {
+            vertical-align: top;
+          }
+        }
       }
       &-disabled {
         background: #F8F8F8;
