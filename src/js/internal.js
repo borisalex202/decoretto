@@ -19,6 +19,7 @@
     };
 
     @@include('./partials/_sliders.js');
+    @@include('./partials/_map.js');
 
     $(window).resize(function () {
         options.documentWidth = $(document).width();
@@ -86,6 +87,11 @@
         e.preventDefault();
 
         $(el).addClass('in');
+    });
+    $('[data-toggle="modal"]').on('click', function (e) {
+        e.preventDefault();
+        elements.mobileMenu.removeClass('active');
+        $('body').removeClass('no-scroll');
     });
 
     $(document).mouseup(function (e){

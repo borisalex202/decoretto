@@ -29,10 +29,10 @@
         padding-right: 40px;
       }
       @media (max-width: $screen-md-max) {
-        max-width: 50%;
+        max-width: calc(80% - 50px);
       }
       @media (max-width: $screen-sm-max) {
-        max-width: 80%;
+        max-width: calc(80% - 50px);
       }
       @media (max-width: $screen-xs-max) {
         max-width: 100%;

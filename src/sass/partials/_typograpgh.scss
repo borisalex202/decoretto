@@ -206,6 +206,7 @@ a {
       width: auto;
       border: 0;
       height: auto;
+      margin: 0;
       @include opacity(1);
 
       &:before {

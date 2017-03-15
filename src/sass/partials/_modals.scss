@@ -1,0 +1,98 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 20;
+  @include transition($transition);
+  @include opacity(0);
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
+  @include scale(.5, .5);
+
+  &.in {
+    pointer-events: all;
+    @include opacity(1);
+    @include scale(1, 1);
+  }
+  &-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 19;
+
+    &.in {
+
+    }
+  }
+  &-dialog {
+    position: relative;
+    z-index: 200;
+    background: #fff;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+    @include box-shadow(0 0 27px 0 rgba(48,22,61,.5));
+  }
+  &-title {
+    font-family: $font-family-second;
+    font-size: 35px;
+    line-height: 47px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: #4C4B8E;
+
+    .line {
+      display: block;
+      position: relative;
+      height: 1px;
+      width: 100%;
+      max-width: 220px;
+      margin: 15px auto 0;
+      background: #CED5E4;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: -1px;
+        width: 5px;
+        height: 3px;
+        background: #CED5E4;
+      }
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 0;
+      }
+    }
+  }
+  &-close {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    display: block;
+    margin: 0 0 0 auto;
+
+    &:hover {
+      .icon {
+        color: $main-color;
+      }
+    }
+    .icon {
+      color: #9290BA;
+    }
+  }
+  .btn {
+    height: 52px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+}

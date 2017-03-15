@@ -425,7 +425,6 @@
       @include transition($transition);
 
       &:hover {
-        background-image: $btn-default-img-hover;
         z-index: 2;
         border: 0.5px solid transparent;
         @include scale(1.1, 1.1);
@@ -1916,6 +1915,10 @@
       min-height: 510px;
       @include box-shadow(0 0 75px 0 rgba(214,213,219,.75));
     }
+    #map {
+      width: 100%;
+      min-height: 510px;
+    }
   }
   .right{
     padding: 80px 65px 90px;
@@ -2136,7 +2139,7 @@
   }
 }
 .free-wallpapers {
-  padding: 80px 0 330px;
+  padding: 80px 0 260px;
   background: url('../img/bg-free-wallpapers.jpg') center no-repeat;
 
   .label {
@@ -2173,7 +2176,29 @@
       font-size: 20px;
       font-weight: 300;
     }
+    &-block {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 20px;
+    }
+    &-note {
+      span {
+        display: inline-block;
+        vertical-align: top;
+        width: 150px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+
+        &:not(:last-child) {
+          margin-right: 33px;
+        }
+      }
+    }
     .btn {
+      display: inline-block;
+      vertical-align: top;
       font-size: 20px;
       line-height: 20px;
       padding: 27px 65px 25px;
@@ -2202,6 +2227,22 @@
       font-size: 46px;
       line-height: 46px;
     }
+    .timer {
+      &-note {
+        span {
+          font-size: 15px;
+          width: 80px;
+
+          &:not(:last-child) {
+            margin-right: 15px;
+          }
+        }
+      }
+      .btn {
+        position: relative;
+        top: -10px;
+      }
+    }
   }
   @media (max-width: 630px) {
     padding: 90px 0 120px;
@@ -2211,4 +2252,52 @@
       line-height: 46px;
     }
   }
+  @media (max-width: 340px) {
+    .timer {
+      &-note {
+        position: relative;
+        top: -20px;
+      }
+    }
+  }
+}
+.jcrop {
+  &-active {
+    border: 1px solid #49485D;
+    max-width: 100%;
+    height: auto !important;
+    width: 100% !important;
+    overflow: hidden;
+  }
+  &-handle {
+    &.ord {
+      &-n,
+      &-s,
+      &-e,
+      &-w,
+      &-sw,
+      &-ne,
+      &-nw,
+      &-se {
+        display: none;
+      }
+    }
+  }
+  &-border {
+    opacity: 1 !important;
+    filter: alpha(opacity=100)!important;
+
+    &.ord-n,
+    &.ord-s {
+      background: url('../img/ord-ns.png');
+    }
+    &.ord-w,
+    &.ord-e {
+      background: url('../img/ord-we.png');
+    }
+  }
+}
+.crop-block {
+  width: 100% !important;
+  margin: 0 auto;
 }

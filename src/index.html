@@ -284,7 +284,10 @@
 												<div class="form-group image">
 													<label>
 														<input type="file" class="form-control">
-														<a class="btn btn-default pink">Обзор</a>
+														<a class="btn btn-default pink">
+															<span class="md">Обзор</span>
+															<span class="xs">Выбрать изображение</span>
+														</a>
 													</label>
 												</div>
 											</div>
@@ -342,6 +345,7 @@
 															<input type="text" class="form-control" placeholder="Высота, см">
 														</div>
 													</div>
+													<div class="col-xs-12 crop-block"><img src="img/crop.jpg" alt="" class="crop"></div>
 												</div>
 											</div>
 											<div class="side side-right side-contact">
@@ -826,6 +830,10 @@
 
 					<div class="timer">
 						<p class="timer-title">До завершения акции осталось:</p>
+						<div class="timer-block">
+							<div class="timer-numbers"></div>
+							<div class="timer-note"></div>
+						</div>
 						<button class="btn btn-default">Заказать</button>
 					</div>
 				</div>
@@ -878,5 +886,39 @@
 				</div>
 			</div>
 
-@@include('templates/_footer.html')
+@@include('templates/_footer.html',{
+	"google_map": "true"
+})
+@@include('templates/_modals.html',{
+	"call_me": "true"
+})
+<script>
+    $(function(){
+
+        $('.crop').Jcrop({
+            //onSelect:    showCoords,
+            bgColor:     '#2B2A45',
+            bgOpacity:   .6,
+            setSelect:   [ 0, 70, 400, 150 ]
+		});
+
+        var note = $('.timer-note'),
+            ts = new Date(2017, 4, 12);
+
+        $('.timer-numbers').countdown({
+            timestamp	: ts,
+            callback	: function(days, hours, minutes, seconds){
+
+                var message = '';
+
+                message += '<span>дней</span>';
+                message += '<span>часов</span>';
+                message += '<span>минут</span>';
+
+                note.html(message);
+            }
+        });
+
+    });
+</script>
 @@include('templates/_end.html')

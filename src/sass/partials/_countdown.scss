@@ -1,0 +1,50 @@
+.position{
+  width: 73px;
+  height: 73px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  margin-left: -2px;
+}
+.digit{
+  position: absolute;
+  font-family: $font-family-base;
+  font-size: 33px;
+  font-weight: 200;
+  color: #4c4990;
+  display: block;
+  text-align: center;
+  width: 73px;
+  height: 73px;
+  line-height: 73px;
+}
+.count {
+  &downHolder{
+    margin-left: 2px;
+  }
+  &Div {
+    display: inline-block;
+    width: 33px;
+  }
+  &Seconds {
+    display: none;
+  }
+}
+@media (max-width: $screen-xs-max) {
+  .position {
+    width: 40px;
+    height: 40px;
+  }
+  .digit {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+  }
+  .count {
+    &Div {
+      width: 15px;
+    }
+  }
+}
