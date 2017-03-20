@@ -42,6 +42,10 @@
             $('body').addClass('no-scroll');
         }
     });
+    $('.main-menu a').on('click', function () {
+        elements.mobileMenu.removeClass('active');
+        $('body').removeClass('no-scroll');
+    });
     elements.mobileMenu.find('.icon-cross').on('click', function () {
         elements.mobileMenu.removeClass('active');
         $('body').removeClass('no-scroll');

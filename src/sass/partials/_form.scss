@@ -55,5 +55,25 @@
     &:active {
       border: 1px solid $main-color;
     }
+    &.warning {
+      border-color: yellow;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: yellow;
+        border-color: yellow;
+      }
+    }
+    &.error {
+      border-color: red;
+
+      &:hover,
+      &:focus,
+      &:active  {
+        color: red;
+        border-color: red;
+      }
+    }
   }
 }
