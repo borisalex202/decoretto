@@ -15,10 +15,10 @@
     @include opacity(1);
   }
   &.load-image {
-    top: 65px;
+    top: -110px;
+    left: 16px;
+    right: 16px;
     padding: 60px 30px;
-    width: calc(100% + 275.5px);
-    margin-left: -275px;
 
     h4 {
       font-size: 18px;
@@ -88,7 +88,6 @@
     }
     @media (max-width: $screen-md-max) {
       margin-left: 0;
-      width: 100%;
 
       .side {
         &-left {
@@ -118,6 +117,9 @@
       }
     }
     @media (max-width: $screen-sm-max) {
+      left: 24px;
+      right: 24px;
+
       .side {
         &-left {
           padding: 0;
@@ -135,10 +137,8 @@
       }
     }
     @media (max-width: $screen-xs-max) {
-      width: calc(100% + 30px);
+      top: 0;
       margin-top: 1px;
-      margin-left: -15px;
-      margin-right: -15px;
 
       h4 {
         text-align: center;
@@ -217,6 +217,10 @@
       }
     }
     @media (max-width: 630px) {
+      top: 5px;
+      left: 0;
+      right: 0;
+
       h4 {
         text-align: left;
       }

@@ -264,112 +264,6 @@
 								<button type="reset" class="btn btn-reset">Очистить фильтр</button>
 							</div>
 							<div class="content">
-								<div class="popup load-image" id="load_image">
-									<div class="popup-inner">
-										<p class="popup-title">Загрузить свое изображение и оформить заказ</p>
-										<p class="popup-desc">Загрузите свое изображение, заполните необходимые поля и отправьте заявку. Наш менеджер оценит качество изображения, подкорректирует его при необходимости и перезвонит, сообщив стоимость заказа и сроки его изготовления.</p>
-
-										<div class="sides">
-											<div class="side side-left">
-												<h4>Загрузите свое изображение</h4>
-												<div id="myAwesomeDropzone" class="dropzone hidden-md hidden-sm hidden-xs">
-													<div class="fallback">
-														<input name="file" type="file" multiple/>
-													</div>
-													<div class="tools">
-														<p class="title">Перетащите изображение в эту область</p>
-													</div>
-												</div>
-												<div class="info fs-16 text-center hidden-md hidden-sm hidden-xs"><p>или загрузите файл с компьютера</p></div>
-												<div class="form-group image">
-													<label>
-														<input type="file" class="form-control">
-														<a class="btn btn-default pink">
-															<span class="md">Обзор</span>
-															<span class="xs">Выбрать изображение</span>
-														</a>
-													</label>
-												</div>
-											</div>
-											<div class="side side-right">
-												<h4>Выберите материал обоев</h4>
-												<div class="wallpapers">
-													<label class="checkbox image">
-														<input type="checkbox" name="wallpapers">
-														<span class="icn">
-															<img src="img/check-img1.png" alt="">
-															<span class="icn-hover"><img src="img/check-img-hover1.png" alt=""></span>
-														</span>
-														<span class="text">Песок</span>
-														<span class="desc">бумажная основа</span>
-													</label>
-													<label class="checkbox image">
-														<input type="checkbox" name="wallpapers">
-														<span class="icn">
-															<img src="img/check-img2.png" alt="">
-															<span class="icn-hover"><img src="img/check-img-hover2.png" alt=""></span>
-														</span>
-														<span class="text">Класический</span>
-														<span class="desc">флезелин</span>
-													</label>
-													<label class="checkbox image">
-														<input type="checkbox" name="wallpapers">
-														<span class="icn">
-															<img src="img/check-img3.png" alt="">
-															<span class="icn-hover"><img src="img/check-img-hover3.png" alt=""></span>
-														</span>
-														<span class="text">Штукатурка</span>
-														<span class="desc">текстильная основа</span>
-													</label>
-													<label class="checkbox image">
-														<input type="checkbox" name="wallpapers">
-														<span class="icn">
-															<img src="img/check-img4.png" alt="">
-															<span class="icn-hover"><img src="img/check-img-hover4.png" alt=""></span>
-														</span>
-														<span class="text">Гладкий</span>
-														<span class="desc">флезелин</span>
-													</label>
-												</div>
-											</div>
-											<div class="side side-left side-wallpapers">
-												<h4>Укажите размеры обоев</h4>
-												<div class="row form-block">
-													<div class="col-md-6 col-xs-12">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Ширина, см">
-														</div>
-													</div>
-													<div class="col-md-6 col-xs-12">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Высота, см">
-														</div>
-													</div>
-													<div class="col-xs-12 crop-block"><img src="img/crop.jpg" alt="" class="crop"></div>
-												</div>
-											</div>
-											<div class="side side-right side-contact">
-												<h4>Контактные данные</h4>
-
-												<div class="form-group">
-													<input type="text" class="form-control" placeholder="Как к Вам обращаться?">
-												</div>
-												<div class="form-group">
-													<input type="tel" class="form-control" placeholder="Контактный телефон">
-												</div>
-												<div class="form-group">
-													<input type="email" class="form-control" placeholder="Электронная почта">
-												</div>
-												<div class="form-group text-right">
-													<button type="submit" class="btn btn-default pink">Оформить заказ</button>
-												</div>
-												<div class="info mt-40">
-													<p>После оформления заказа, мы свяжемся с Вами в ближайшее время для уточнения данных. Если у Вас есть вопросы или Вы хотите узнать, о состоянии заказа, позвоните нам по номеру: <br>8 916 825 63 49, указав номер заказа.</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
 								<div class="catalog-tools">
 									<a href="#" class="btn btn-default active icon-hover catalog-btn">
 										<span class="text">
@@ -508,6 +402,112 @@
 									</div>
 								</div>
 								@@include('./templates/_pagination.html')
+							</div>
+							<div class="popup load-image" id="load_image">
+								<div class="popup-inner">
+									<p class="popup-title">Загрузить свое изображение и оформить заказ</p>
+									<p class="popup-desc">Загрузите свое изображение, заполните необходимые поля и отправьте заявку. Наш менеджер оценит качество изображения, подкорректирует его при необходимости и перезвонит, сообщив стоимость заказа и сроки его изготовления.</p>
+
+									<div class="sides">
+										<div class="side side-left">
+											<h4>Загрузите свое изображение</h4>
+											<div id="myAwesomeDropzone" class="dropzone hidden-md hidden-sm hidden-xs">
+												<div class="fallback">
+													<input name="file" type="file" multiple/>
+												</div>
+												<div class="tools">
+													<p class="title">Перетащите изображение в эту область</p>
+												</div>
+											</div>
+											<div class="info fs-16 text-center hidden-md hidden-sm hidden-xs"><p>или загрузите файл с компьютера</p></div>
+											<div class="form-group image">
+												<label>
+													<input type="file" class="form-control">
+													<a class="btn btn-default pink">
+														<span class="md">Обзор</span>
+														<span class="xs">Выбрать изображение</span>
+													</a>
+												</label>
+											</div>
+										</div>
+										<div class="side side-right">
+											<h4>Выберите материал обоев</h4>
+											<div class="wallpapers">
+												<label class="checkbox image">
+													<input type="checkbox" name="wallpapers">
+													<span class="icn">
+															<img src="img/check-img1.png" alt="">
+															<span class="icn-hover"><img src="img/check-img-hover1.png" alt=""></span>
+														</span>
+													<span class="text">Песок</span>
+													<span class="desc">бумажная основа</span>
+												</label>
+												<label class="checkbox image">
+													<input type="checkbox" name="wallpapers">
+													<span class="icn">
+															<img src="img/check-img2.png" alt="">
+															<span class="icn-hover"><img src="img/check-img-hover2.png" alt=""></span>
+														</span>
+													<span class="text">Класический</span>
+													<span class="desc">флезелин</span>
+												</label>
+												<label class="checkbox image">
+													<input type="checkbox" name="wallpapers">
+													<span class="icn">
+															<img src="img/check-img3.png" alt="">
+															<span class="icn-hover"><img src="img/check-img-hover3.png" alt=""></span>
+														</span>
+													<span class="text">Штукатурка</span>
+													<span class="desc">текстильная основа</span>
+												</label>
+												<label class="checkbox image">
+													<input type="checkbox" name="wallpapers">
+													<span class="icn">
+															<img src="img/check-img4.png" alt="">
+															<span class="icn-hover"><img src="img/check-img-hover4.png" alt=""></span>
+														</span>
+													<span class="text">Гладкий</span>
+													<span class="desc">флезелин</span>
+												</label>
+											</div>
+										</div>
+										<div class="side side-left side-wallpapers">
+											<h4>Укажите размеры обоев</h4>
+											<div class="row form-block">
+												<div class="col-md-6 col-xs-12">
+													<div class="form-group">
+														<input type="text" class="form-control" placeholder="Ширина, см">
+													</div>
+												</div>
+												<div class="col-md-6 col-xs-12">
+													<div class="form-group">
+														<input type="text" class="form-control" placeholder="Высота, см">
+													</div>
+												</div>
+												<div class="col-xs-12 crop-block"><img src="img/crop.jpg" alt="" class="crop"></div>
+											</div>
+										</div>
+										<div class="side side-right side-contact">
+											<h4>Контактные данные</h4>
+
+											<div class="form-group">
+												<input type="text" class="form-control" placeholder="Как к Вам обращаться?">
+											</div>
+											<div class="form-group">
+												<input type="tel" class="form-control" placeholder="Контактный телефон">
+											</div>
+											<div class="form-group">
+												<input type="email" class="form-control" placeholder="Электронная почта">
+											</div>
+											<div class="form-group text-right">
+												<button type="submit" class="btn btn-default pink">Оформить заказ</button>
+											</div>
+											<div class="info mt-40">
+												<p>После оформления заказа, мы свяжемся с Вами в ближайшее время для уточнения данных. Если у Вас есть вопросы или Вы хотите узнать, о состоянии заказа, позвоните нам по номеру: <br>8 916 825 63 49, указав номер заказа.</p>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</form>
@@ -825,7 +825,7 @@
 			<div class="free-wallpapers">
 				<div class="container">
 					<div class="label">Акция</div>
-					<p class="title">БЕСПЛАТНАЯ <br>ПОКЛЕЙКА ОБОЕВ</p>
+					<p class="title">БЕСПЛАТНАЯ ПОКЛЕЙКА ОБОЕВ</p>
 					<span class="date">до 12.05.2017</span>
 
 					<div class="timer">

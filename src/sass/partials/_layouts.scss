@@ -679,6 +679,7 @@
       }
     }
     .container {
+      position: relative;
       @include flexbox();
     }
     .filter {
@@ -2168,6 +2169,7 @@
     line-height: 90px;
     margin: 0;
     letter-spacing: 2px;
+    max-width: 60%;
   }
   .date {
     color: #fff;
@@ -2214,11 +2216,17 @@
       text-transform: uppercase;
     }
   }
+  @media (max-width: $screen-md-max) {
+    .title {
+      max-width: 80%;
+    }
+  }
   @media (max-width: $screen-sm-max) {
     padding: 120px 0 140px;
   }
   @media (max-width: $screen-xs-max) {
     padding: 80px 0;
+    max-width: 100%;
 
     .label {
       padding: 12px 35px 10px;
