@@ -121,12 +121,11 @@
         }
     });
 
-    $("#myAwesomeDropzone").dropzone({
-        url: '/file-upload',
-        paramName: "file",
-        maxFilesize: 100,
-        maxFiles: 1,
-        uploadMultiple: false
+    $('[data-dropzone]').on('click', function () {
+       var id = $(this).data('dropzone');
+
+        console.log(id);
+       $(id).click();
     });
 
     $('input[type="tel"]').mask('+7(999)999-99-99', {

@@ -411,18 +411,28 @@
 									<div class="sides">
 										<div class="side side-left">
 											<h4>Загрузите свое изображение</h4>
-											<div id="myAwesomeDropzone" class="dropzone hidden-md hidden-sm hidden-xs">
-												<div class="fallback">
-													<input name="file" type="file" multiple/>
+											<!--<div id="myAwesomeDropzone" class="dropzone hidden-md hidden-sm hidden-xs">-->
+												<!--<div class="fallback">-->
+													<!--<input name="file" id="file_upload" type="file"/>-->
+												<!--</div>-->
+												<!--<div class="tools">-->
+													<!--<p class="title">Перетащите изображение в эту область</p>-->
+												<!--</div>-->
+											<!--</div>-->
+											<div class="box dropzone">
+												<div class="box__input">
+													<input class="box__file" id="myAwesomeDropzone" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" />
+													<label for="file">Перетащите изображение в эту область</label>
+													<button class="box__button" type="submit">Загрузить</button>
 												</div>
-												<div class="tools">
-													<p class="title">Перетащите изображение в эту область</p>
-												</div>
+												<div class="box__uploading">Загрузка&hellip;</div>
+												<div class="box__success">Загрузка завершена!</div>
+												<div class="box__error">Ошибка! <span></span>.</div>
 											</div>
 											<div class="info fs-16 text-center hidden-md hidden-sm hidden-xs"><p>или загрузите файл с компьютера</p></div>
 											<div class="form-group image">
-												<label>
-													<input type="file" class="form-control">
+												<label data-dropzone="#myAwesomeDropzone">
+													<span class="form-control"></span>
 													<a class="btn btn-default pink">
 														<span class="md">Обзор</span>
 														<span class="xs">Выбрать изображение</span>

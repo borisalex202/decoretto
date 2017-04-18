@@ -28,6 +28,11 @@
         padding-left: 40px;
         padding-right: 40px;
       }
+      .form-control {
+        display: block;
+        cursor: pointer;
+        @include transition($transition);
+      }
       @media (max-width: $screen-md-max) {
         max-width: calc(80% - 50px);
       }
@@ -36,6 +41,10 @@
       }
       @media (max-width: $screen-xs-max) {
         max-width: 100%;
+
+        .form-control {
+          display: none;
+        }
       }
     }
   }
