@@ -124,7 +124,9 @@
     $("#myAwesomeDropzone").dropzone({
         url: '/file-upload',
         paramName: "file",
-        maxFilesize: 100
+        maxFilesize: 100,
+        maxFiles: 1,
+        uploadMultiple: false
     });
 
     $('input[type="tel"]').mask('+7(999)999-99-99', {
