@@ -43,7 +43,7 @@
             showFiles( e.target.files );
 
 
-            triggerFormSubmit();
+            //triggerFormSubmit();
 
 
         });
@@ -82,7 +82,7 @@
                 showFiles( droppedFiles );
 
 
-                triggerFormSubmit();
+                //triggerFormSubmit();
 
             });
         }

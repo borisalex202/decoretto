@@ -124,7 +124,6 @@
     $('[data-dropzone]').on('click', function () {
        var id = $(this).data('dropzone');
 
-        console.log(id);
        $(id).click();
     });
 

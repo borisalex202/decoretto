@@ -1226,6 +1226,8 @@
   margin-bottom: 13px;
   min-height: 320px;
   cursor: pointer;
+  overflow: hidden;
+  word-wrap: break-word;
   @include flexbox();
   @include align-items(flex-end);
   @include justify-content(center);
